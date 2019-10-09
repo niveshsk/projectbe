@@ -1,0 +1,131 @@
+@CHARSET "ISO-8859-1";
+
+fieldset{
+
+  position:relative;
+  top:100px;
+  margin-left:250px;
+  margin-right:250px;
+  border:none;
+}
+body{
+	font-size:25px;
+	color:#ff8000;
+	background-color:lightblue;
+	background-image:url("/project/b.jpg");
+	background-size:cover;
+}
+#reg{
+	position:relative;
+  top:100px;
+  margin-left:350px;
+  margin-right:350px;
+}
+
+a{
+	color:white;
+	display:block;
+	width:300px;
+	text-decoration:none;
+		background-color:#333;
+}
+ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	background-color:#333;
+}
+li{
+	float:left;
+}
+li a{
+	display:block;
+	color:white;
+	text-align:center;
+	padding:14px 16px;
+	text-decoration:none;
+	
+	}
+li a:hover{
+	background-color:#111;
+}
+a:hover{
+	background-color:#111;
+}
+#in{
+	color:red;
+	font-size:15px;
+}
+tr{
+	text-align:left;
+}
+#reggg{
+	
+  position:relative;
+  top:10px;
+  margin-left:250px;
+  margin-right:250px;
+  border:none;
+  font-size:15px;
+}
+#log{
+	
+  position:relative;
+  top:20px;
+  margin-left:250px;
+  margin-right:250px;
+  border:none;
+  font-size:25px;
+}
+
+#ad{
+	position:relative;
+  top:100px;
+  margin-left:250px;
+  margin-right:250px;
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+.hh{
+	 background-color: #fefefe;
+    margin: 1% auto 5% auto; 
+    border: 1px solid #888;
+    width: 40%; 
+    bottom:20px;
+}
+input[type=text], input[type=button ] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+

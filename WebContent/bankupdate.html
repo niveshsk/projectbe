@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="/project/css/a.css" rel="stylesheet"type="text/css">
+
+<meta charset="ISO-8859-1">
+<title>BANK DATA  UPDATE</title>
+</head>
+<body><ul ><li><a href="/project/home.html">HOME</a></li>
+<li> <a href="/project/agentreg.html">CREDIT CARD AGENT REGISTRATION</a>
+</li>
+<li><a href="/project/bankupdate.html" >BANK DATABASE UPDATE</a></li>
+<li><a href="/project/propery.html">PROPERTY</a></li>
+<li><a href="/project/gold.html">GOLD</a></li>
+<li>  <a href="/project/bcardreg.html">B_CARD_INFO </a></li>
+<li><a href="/project/loanupdate.html">LOAN DATABASE UPDATE</a></li>
+<li><a href="/project/medical.html">MEDICAL</a></li>
+<li><a href="/project/relation.html">RELATION</a></li>
+
+</ul>
+<div align="center">
+<fieldset>
+<legend>Bank Update</legend>
+<form action="servlet/Bankup" method="post">
+<table><tr>
+<td>NAME:</td>       <td>       <input type="text" name="name1"/></td></tr>
+<tr><td>DATE OF BIRTH </td><td>   <input type="date" name="dob1"/></td></tr>
+<tr><td>ADDRESS  </td><td>   <input type="text" name="addr1"/></td></tr>
+
+
+<tr><td>
+
+<label>
+<input type="radio" name="gender1" value="male"/>male<br>
+<input type="radio" name="gender1" value="female"/>female<br>
+<input type="radio" name="gender1" value="others"/>others<br>
+
+</label></td><td></td></tr>
+</table>
+<input type="submit" value="submit"/>
+<input type="reset" value="reset"/>
+</form>
+<a href="trans.html">TRANSACTION</a>
+</fieldset>
+</div>
+</body>
+</html>

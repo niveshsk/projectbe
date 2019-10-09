@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text], input[type=password],input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button.qq {
+    background-color :blue;
+    color: white;
+    padding: 4px 10px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 5%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.user {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.modal {
+    display: block; 
+    position: fixed; 
+    z-index: 1; 
+    left: 30px;
+    right:20px;
+    bottom:30px;
+    top: 50px;
+    width: 70%; 
+    height: 90%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+         margin: 1% auto 5% auto;
+    border: 1px solid #888;
+    top:70%;
+    width: 60%; 
+    bottom:70px;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+table{
+align:left;
+}
+.he{
+  display:none;
+}
+</style>
+
+<link href="/project/css/a.css" rel="stylesheet"type="text/css">
+
+<meta charset="ISO-8859-1">
+<title>MEDICAL</title>
+<link rel="icon" href="/project/medi.png" type="image/png">
+
+</head>
+<script type="text/javascript">
+function my(id){
+	document.getElementById(id).style.display = "block";
+	
+}
+function my1(id){
+	document.getElementById(id).style.display = "none";
+	
+}
+
+</script>
+<body>
+<ul ><li><a href="/project/home.html">HOME</a></li>
+<li> <a href="/project/agentreg.html">CREDIT CARD AGENT REGISTRATION</a>
+</li>
+<li><a href="/project/bankupdate.html" >BANK DATABASE UPDATE</a></li>
+<li><a href="/project/propery.html">PROPERTY</a></li>
+<li><a href="/project/gold.html">GOLD</a></li>
+<li>  <a href="/project/bcardreg.html">B_CARD_INFO </a></li>
+<li><a href="/project/loanupdate.html">LOAN DATABASE UPDATE</a></li>
+<li><a href="/project/relation.html">RELATION</a></li>
+
+</ul>
+
+
+<table>
+
+<tr><td> 
+  <form class="modal-content animate" action="servlet/Blood" method="post">
+<div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="/project/medi.png" alt="user" class="user">
+    </div>
+    <div align="center">
+    <b>MEDICAL DETAILS </b>
+    </div>
+    <div class="container">
+    <label><b>B CARD NUMBER</b></label>
+      <input type="number" placeholder="Enter b card number" name="bcardm" required>
+    
+      <label><b>USERNAME</b></label>
+      <input type="text" placeholder="Enter Username" name="namem" required>
+
+      <label><b>PASSWORD</b></label>
+      <input type="password" placeholder="Enter Password" name="passm" required>
+      <label><b>HEIGHT</b></label>
+      <input type="number" placeholder="Enter height" name="hem" required>
+       <label><b>WEIGHT</b></label>
+      <input type="number" placeholder="Enter weight" name="wem" required>
+       <label><b>BLOOD PRESSURE</b></label>
+      <input type="number" placeholder="Enter BP" name="bpm" required>
+      <label><b>HEART BEAT</b></label>
+      <input type="number" placeholder="Enter count of heart beat" name="hbm" required>
+      
+       <label><b>HEART DISEASES:</b></label>
+    <table>   <tr><td>
+
+<input type="radio" name="hdis" value="Yes" onclick="my('hm')"/>YES</td><td>
+<input type="radio" name="hdis" value="No" onclick="my1('hm')" checked/>NO<br></td></tr>
+
+<tr></tr></table>
+<textarea style="display:none;" rows="" cols="" name="hre" id="hm"placeholder="Enter heart remark"></textarea>
+       <label><b>KIDNEY DISEASES:</b></label>
+    <table>   <tr><td>
+
+<input type="radio" name="kdis" value="Yes" onclick="my('km')"/>YES</td><td>
+<input type="radio" name="kdis" value="No" onclick="my1('km')" checked />NO<br></td></tr>
+
+<tr></tr></table>
+<textarea style="display:none;" rows="" cols="" name="kre" id="km" placeholder="Enter kidney remark"></textarea>
+          <label><b>BRAIN DISEASES:</b></label>
+    <table>   <tr><td>
+
+<input type="radio" name="bdis" value="Yes" onclick="my('bm')"/>YES</td><td>
+<input type="radio" name="bdis" value="No" onclick="my1('bm')" checked/>NO<br></td></tr>
+
+<tr></tr></table>
+<textarea style="display:none;" rows="" cols="" name="bre" id="bm"placeholder="Enter brain remark"></textarea>
+          <label><b>BLOOD DISEASES:</b></label>
+    <table>   <tr><td>
+
+<input type="radio" name="bldis" value="Yes" onclick="my('blm')"/>YES</td><td>
+<input type="radio" name="bldis" value="No" onclick="my1('blm')" checked/>NO<br></td></tr>
+
+<tr></tr></table>
+<textarea style="display:none;" rows="" cols="" placeholder="Enter blood remark" name="blre" id="blm"></textarea>
+          <label><b>SKIN DISEASES:</b></label>
+    <table>   <tr><td>
+
+<input type="radio" name="sdis" value="Yes" onclick="my('sm')"/>YES</td><td>
+<input type="radio" name="sdis" value="No" onclick="my1('sm')" checked/>NO<br></td></tr>
+
+<tr></tr></table>
+<textarea style="display:none;" placeholder="Enter skin remark" rows="" cols="" name="sre" id="sm"></textarea>
+          <label><b>STOMACH DISEASES:</b></label>
+    <table>   <tr><td>
+
+<input type="radio" name="stdis" value="Yes" onclick="my('stm')"/>YES</td><td>
+<input type="radio" name="stdis" value="No" onclick="my1('stm')" checked/>NO<br></td></tr>
+
+<tr></tr></table>
+<textarea placeholder="Enter stomach remark" style="display:none;" rows="" cols="" name="stre" id="stm"></textarea>
+       
+           
+        <button type="submit">SUBMIT</button>
+      
+    </div>
+
+    
+  </form>
+  </td><td>
+  
+  </td></tr>
+</table>
+</body>
+</html>

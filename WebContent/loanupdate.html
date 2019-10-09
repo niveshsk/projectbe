@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/a.css" rel="stylesheet"type="text/css">
+
+<meta charset="ISO-8859-1">
+<title>LOAN UPDATE</title>
+</head>
+<body><ul ><li><a href="/project/home.html">HOME</a></li>
+<li> <a href="/project/agentreg.html">CREDIT CARD AGENT REGISTRATION</a>
+</li>
+<li><a href="/project/bankupdate.html" >BANK DATABASE UPDATE</a></li>
+<li><a href="/project/propery.html">PROPERTY</a></li>
+<li><a href="/project/gold.html">GOLD</a></li>
+<li>  <a href="/project/bcardreg.html">B_CARD_INFO </a></li>
+<li><a href="/project/loanupdate.html">LOAN DATABASE UPDATE</a></li>
+<li><a href="/project/medical.html">MEDICAL</a></li>
+<li><a href="/project/relation.html">RELATION</a></li>
+
+</ul>
+<div align="center">
+<fieldset id="reggg">
+<legend>LOAN REGISTRATION</legend>
+<form action="servlet/Loan" method="post">
+<table><tr>
+<td>NAME:</td>       <td>       <input type="text" name="name3"/></td></tr>
+<tr><td>DATE OF BIRTH  </td><td>   <input type="date" name="dob2"/></td></tr>
+<tr><td>ADDRESS  </td><td>   <input type="text" name="addr3"/></td></tr>
+
+<tr><td>LOAN AMOUNT</td><td><br><input type="number" name="amount2" min="10000" max="99999999999"/><br><p id="in">(please enter multiples of 1000)</p></td></tr>
+<tr><td>START DATE</td><td><input type="date" name="due2"/></td></tr>
+<tr><td>INTEREST DUE</td><td><br><input type="number" name="dueam2" min="500" max="50000"/><br><p id="in">(please enter 500,1000,2000,3000,4000)</p></td></tr>
+</table>
+<input type="submit" value="submit"/>
+<input type="reset" value="reset"/>
+</form>
+<a href="dueupdate.html">due update</a>
+</fieldset>
+</div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text], input[type=password],input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.user {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.modal {
+    display: block; 
+    position: fixed; 
+    z-index: 1; 
+    left: 30px;
+    right:20px;
+    bottom:30px;
+    top: 50px;
+    width: 70%; 
+    height: 90%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 1% auto 5% auto; 
+    border: 1px solid #888;
+    top:70%;
+    width: 40%; 
+    bottom:70px;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+
+<link href="/project/css/a.css" rel="stylesheet"type="text/css">
+
+<meta charset="ISO-8859-1">
+<title>GOLD</title>
+<link rel="icon" href="/project/gold.jpg" type="image/jpg">
+</head>
+<body>
+<ul ><li><a href="/project/home.html">HOME</a></li>
+<li> <a href="/project/agentreg.html">CREDIT CARD AGENT REGISTRATION</a>
+</li>
+<li><a href="/project/bankupdate.html" >BANK DATABASE UPDATE</a></li>
+<li><a href="/project/propery.html">PROPERTY</a></li>
+<li><a href="/project/gold.html">GOLD</a></li>
+<li>  <a href="/project/bcardreg.html">B_CARD_INFO </a></li>
+<li><a href="/project/loanupdate.html">LOAN DATABASE UPDATE</a></li>
+<li><a href="/project/medical.html">MEDICAL</a></li>
+<li><a href="/project/relation.html">RELATION</a></li>
+
+</ul>
+
+
+
+
+  
+  <form class="modal-content animate" action="servlet/Gold" method="post">
+<div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="/project/gold.jpg" alt="user" class="user">
+    </div>
+    <div align="center">
+    <b>GOLD UPDATE </b>
+    </div>
+    <div class="container">
+    <label><b>B CARD NUMBER</b></label>
+      <input type="number" placeholder="Enter b card number" name="bcardgo" required>
+    
+      <label><b>USERNAME</b></label>
+      <input type="text" placeholder="Enter Username" name="namego" required>
+
+      <label><b>PASSWORD</b></label>
+      <input type="password" placeholder="Enter Password" name="passgo" required>
+       <label><b>JEWELS:</b>(1kg=1000grams)</label>
+      <input type="number" placeholder="Enter Jewels in grams......" name="goje" >
+       <label><b>GOLDBARS:</b>(1kg=1000grams)</label>
+      <input type="number" placeholder="Enter goldbars in grams......" name="goba" > 
+      <label><b>GADGETS:</b></label>
+      <input type="text" placeholder="Enter name of gadgets ......" name="goga" >
+      <button type="submit">UPDATE</button>
+      
+    </div>
+
+    
+  </form>
+
+
+
+</body>
+</html>

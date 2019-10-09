@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text], input[type=password],input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button.qq {
+    background-color :blue;
+    color: white;
+    padding: 4px 10px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 5%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.user {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.modal {
+    display: block; 
+    position: fixed; 
+    z-index: 1; 
+    left: 30px;
+    right:20px;
+    bottom:30px;
+    top: 50px;
+    width: 70%; 
+    height: 90%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+         margin: 1% auto 5% auto;
+    border: 1px solid #888;
+    top:70%;
+    width: 60%; 
+    bottom:70px;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+table{
+align:left;
+}
+.he{
+  display:none;
+}
+</style>
+
+<link href="/project/css/a.css" rel="stylesheet"type="text/css">
+
+<meta charset="ISO-8859-1">
+<title>PROPERTY</title>
+<link rel="icon" href="/project/pro.png" type="image/png">
+
+</head>
+<script type="text/javascript">
+function my(){
+	document.getElementById("h").style.display = "block";
+	
+}
+
+</script>
+<body>
+<ul ><li><a href="/project/home.html">HOME</a></li>
+<li> <a href="/project/agentreg.html">CREDIT CARD AGENT REGISTRATION</a>
+</li>
+<li><a href="/project/bankupdate.html" >BANK DATABASE UPDATE</a></li>
+<li><a href="/project/propery.html">PROPERTY</a></li>
+<li><a href="/project/gold.html">GOLD</a></li>
+<li>  <a href="/project/bcardreg.html">B_CARD_INFO </a></li>
+<li><a href="/project/loanupdate.html">LOAN DATABASE UPDATE</a></li>
+<li><a href="/project/medical.html">MEDICAL</a></li>
+<li><a href="/project/relation.html">RELATION</a></li>
+
+</ul>
+
+
+<table>
+
+<tr><td> 
+  <form class="modal-content animate" action="servlet/Property" method="post">
+<div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="/project/pro.png" alt="user" class="user">
+    </div>
+    <div align="center">
+    <b>PROPERTY UPDATE </b>
+    </div>
+    <div class="container">
+    <label><b>B CARD NUMBER</b></label>
+      <input type="number" placeholder="Enter b card number" name="bcardpr" required>
+    
+      <label><b>USERNAME</b></label>
+      <input type="text" placeholder="Enter Username" name="namepr" required>
+
+      <label><b>PASSWORD</b></label>
+      <input type="password" placeholder="Enter Password" name="passpr" required>
+       <label><b>LAND 1 AREA:</b>(in square feet)</label><button class="qq" onclick=my()>?</button>
+       <input type="number" placeholder="Enter area of the land otherwise type zero......" name="land1" required > 
+     <div id="h" class="he">
+  1 ground = 2400 sq.ft<br>
+  1 square meter = 10.76 sq.ft<br>
+  1 acre = 43560 sq.ft<br>
+  1 cent = 435.6 sq.ft<br>
+  1 square yard = 9 sq.ft<br>
+ </div>
+      <label><b>LAND 1 ADDRESS:</b></label>
+      <input type="text" placeholder="Enter address of the land otherwise type nil......" name="ladd1" required>
+   <label><b>LAND 2 AREA:</b>(in square feet)</label><button class="qq" onclick=my()>?</button>
+       <input type="number" placeholder="Enter area of the land otherwise type zero......" name="land2" required> 
+     <div id="h" class="he">
+  1 ground = 2400 sq.ft<br>
+  1 square meter = 10.76 sq.ft<br>
+  1 acre = 43560 sq.ft<br>
+  1 cent = 435.6 sq.ft<br>
+  1 square yard = 9 sq.ft<br>
+ </div>
+      <label><b>LAND 2 ADDRESS:</b></label>
+      <input type="text" placeholder="Enter address of the land otherwise type nil ......" name="ladd2" required>
+       <label><b>LAND 3 AREA:</b>(in square feet)</label><button class="qq" onclick=my()>?</button>
+       <input type="number" placeholder="Enter area of the land......" name="land3" required> 
+     <div id="h" class="he">
+  1 ground = 2400 sq.ft<br>
+  1 square meter = 10.76 sq.ft<br>
+  1 acre = 43560 sq.ft<br>
+  1 cent = 435.6 sq.ft<br>
+  1 square yard = 9 sq.ft<br>
+ </div>
+      <label><b>LAND 3 ADDRESS:</b></label>
+      <input type="text" placeholder="Enter address of the land otherwise type nil ......" name="ladd3" required>
+      <label><b>FLAT 1 ADDRESS:</b></label>
+      <input type="text" placeholder="Enter address of the land otherwise type nil ......" name="fadd1" required>
+      <label><b>FLAT 2 ADDRESS:</b></label>
+      <input type="text" placeholder="Enter address of the land otherwise type nil......" name="fadd2" required>
+      <label><b>FLAT 3 ADDRESS:</b></label>
+      <input type="text" placeholder="Enter address of the land otherwise type nil......" name="fadd3" required>
+       <label><b>SHOP 1 ADDRESS:</b></label>
+      <input type="text" placeholder="Enter address of the land otherwise type nil......" name="sadd1" required>
+      <label><b>SHOP 2 ADDRESS:</b></label>
+      <input type="text" placeholder="Enter address of the land otherwise type nil......" name="sadd2" required>
+      <label><b>SHOP 3 ADDRESS:</b></label>
+      <input type="text" placeholder="Enter address of the land otherwise type nil......" name="sadd3" required>
+     
+  <button type="submit">SUBMIT</button>
+      
+    </div>
+
+    
+  </form>
+  </td><td>
+  
+  </td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text], input[type=password],input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button.dd {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button.qq {
+    background-color:none;
+    color: black;
+    padding: 4px 10px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 45%;
+}
+
+button:hover {
+    opacity: 0.4;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.user {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.modal {
+    display: block; 
+    position: fixed; 
+    z-index: 1; 
+    left: 30px;
+    right:20px;
+    bottom:30px;
+    top: 50px;
+    width: 70%; 
+    height: 90%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+         margin: 1% auto 5% auto;
+    border: 1px solid #888;
+    top:70%;
+    width: 60%; 
+    bottom:70px;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+table{
+align:left;
+}
+.he{
+  display:none;
+}
+</style>
+
+<link href="/project/css/a.css" rel="stylesheet"type="text/css">
+
+<meta charset="ISO-8859-1">
+<title>FAMILY MEMBERS</title>
+<link rel="icon" href="/project/fam.png" type="image/png">
+
+</head>
+<script type="text/javascript">
+function my(id){
+	document.getElementById(id).style.display = "block";
+	
+}
+function my1(id){
+	document.getElementById(id).style.display = "none";
+	
+}
+
+</script>
+<body>
+<ul ><li><a href="/project/home.html">HOME</a></li>
+<li> <a href="/project/agentreg.html">CREDIT CARD AGENT REGISTRATION</a>
+</li>
+<li><a href="/project/bankupdate.html" >BANK DATABASE UPDATE</a></li>
+<li><a href="/project/propery.html">PROPERTY</a></li>
+<li><a href="/project/gold.html">GOLD</a></li>
+<li>  <a href="/project/bcardreg.html">B_CARD_INFO </a></li>
+<li><a href="/project/loanupdate.html">LOAN DATABASE UPDATE</a></li>
+<li><a href="/project/medical.html">MEDICAL</a></li>
+
+</ul>
+
+
+
+  <form class="modal-content animate" action="servlet/Relation" method="post">
+<div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="/project/fam.png" alt="user" class="user">
+    </div>
+    <div align="center">
+    <b>RELATION DETAILS </b>
+    </div>
+    <div class="container">
+    <label><b>B CARD NUMBER</b></label>
+      <input type="number" placeholder="Enter b card number" name="bcardre" required>
+    
+      <label><b>USERNAME</b></label>
+      <input type="text" placeholder="Enter Username" name="namere" required>
+
+      <label><b>PASSWORD</b></label>
+      <input type="password" placeholder="Enter Password" name="passre" required>
+      <label><b>FATHER'S NAME</b></label>
+      <input type="text" placeholder="Enter name of father" name="fana" required>
+       <label><b>FATHER'S AGE</b></label>
+      <input type="number" placeholder="Enter age of father" name="faage" required>
+       <label><b>MOTHERS'S NAME</b></label>
+      <input type="text" placeholder="Enter name of mother" name="mona" required>
+      <label><b>MOTHER'S AGE</b></label>
+      <input type="number" placeholder="Enter age of mother" name="moage" required>
+      <label><b>BROTHER'S NAME 1</b></label>
+      <input type="text" placeholder="Enter name of the brother 1" name="brna1" >
+       <label><b>BROTHER'S AGE 1</b></label>
+      <input type="number" placeholder="Enter age of the brother 1" name="brage1" >
+<button class="qq" id="but1" onclick="my('brnew1');my1('but1')">+add another name</button>
+<div id="brnew1" style="display:none;">
+      <label><b>BROTHER'S NAME 2</b></label>
+      <input type="text" placeholder="Enter name of the brother 2" name="brna2" >
+       <label><b>BROTHER'S AGE 2</b></label>
+      <input type="number" placeholder="Enter age of the brother 2" name="brage2" >
+      <button id="but2" class="qq" onclick="my('brnew2');my1('but2')">+add another name</button>
+      
+</div><div id="brnew2" style="display:none;">      <label><b>BROTHER'S NAME 3</b></label>
+      <input type="text" placeholder="Enter name of the brother 3" name="brna3" >
+       <label><b>BROTHER'S AGE 3</b></label>
+      <input type="number" placeholder="Enter age of the brother 3" name="brage3" >
+  </div>     
+  <br><label><b>SISTER'S NAME 1</b></label>
+      <input type="text" placeholder="Enter name of the sister 1" name="sina1" >
+      <br> <label><b>SISTER'S AGE 1</b></label>
+      <input type="number" placeholder="Enter age of the sister 1" name="siage1" >
+    <button id="but3" class="qq" onclick="my('sinew1');my1('but3')">+add another name</button>
+    
+    <div id="sinew1"style="display:none;">   <label><b>SISTER'S NAME 2</b></label>
+      <input type="number" placeholder="Enter name of the sister 2" name="sina2" >
+       <label><b>SISTER'S AGE 2</b></label>
+      <input type="number" placeholder="Enter age of the sister 2" name="siage2" ><button id="but4" class="qq" onclick="my('sinew2');my1('but4')">+add another name</button>
+      
+     </div><div id="sinew2"style="display:none;">  <label><b>SISTER'S NAME 3</b></label>
+      <input type="number" placeholder="Enter name of the sister 3" name="sina3" >
+       <label><b>SISTER'S AGE 3</b></label>
+      <input type="number" placeholder="Enter age of the sister 3" name="siage3" >
+     </div> 
+       
+
+        <button class="dd" type="submit">SUBMIT</button>
+      
+    </div>
+
+    
+  </form>
+</body>
+</html>
